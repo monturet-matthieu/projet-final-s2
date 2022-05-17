@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     "./index.html",
@@ -43,9 +45,7 @@ module.exports = {
         "8xl": "6.25rem"
       },
       "fontFamily": {
-        "bebas-neue": "Bebas Neue",
-        "futura-hv-bt": "Futura Hv BT",
-        "karla": "Karla"
+        'karla': 'Karla, sans-serif',
       },
       "borderRadius": {
         "none": "0",
