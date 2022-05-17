@@ -46,6 +46,8 @@ module.exports = {
       },
       "fontFamily": {
         'karla': 'Karla, sans-serif',
+        'bebas-neue': "'Bebas Neue', sans-serif",
+        'gothic': "'Gothic A1', sans-serif",
       },
       "borderRadius": {
         "none": "0",
