@@ -7,8 +7,6 @@
       <h3>MENSUELLES</h3>
       <h2>Archives</h2>
     </body>
-    
-
   </main>
 </template>
 
