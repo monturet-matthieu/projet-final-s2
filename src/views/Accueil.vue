@@ -7,8 +7,10 @@
       <h3>MENSUELLES</h3>
       <h2>Archives</h2>
     </body>
+    <Footer />
   </main>
 </template>
 
 <script>
+import Footer from "/src/components/layout/Footer.vue";
 </script>
