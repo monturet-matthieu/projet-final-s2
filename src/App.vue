@@ -2,11 +2,13 @@
 import { RouterLink, RouterView } from "vue-router";
 import BarreNav from "./components/BarreNav.vue";
 import Footer from "./components/layout/Footer.vue";
+import Header from "./components/layout/Header.vue";
 </script>
 
 <template>
   <header>
-    <nav>
+    <Header />
+    <nav class="flex space-x-6 mb-5 w-screen pt-4">
       <RouterLink to="/">Accueil</RouterLink>
       <RouterLink to="/mentions">Mentions légales</RouterLink>
       <RouterLink to="/profil">Profil</RouterLink>
@@ -14,10 +16,8 @@ import Footer from "./components/layout/Footer.vue";
       <RouterLink to="/parametres">Paramètres</RouterLink>
       <RouterLink to="/cgu">CGU</RouterLink>
       <BarreNav />
-
-      <Footer />
     </nav>
   </header>
-
+  <Footer />
   <RouterView />
 </template>
