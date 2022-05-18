@@ -1,29 +1,13 @@
 <template>
-        <form @submit.prevent="onCnx()">
-          <div class="input-group mb-3">            
-            <div class="input-group-prepend">
-                <button class="btn btn-dark">Email :</button>
-            </div>
-            <input class="form-control" type="text" v-model="user.email" required />
-          </div>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <button  class="btn btn-dark">Mot de passe :</button>
-            </div>
-            <input class="form-control" type="password" v-model="user.password" required />
-          </div>
-          <div class="alert alert-warning text-center mb-3" v-if="message!=null" >
-            {{ message }}
-          </div>
-          <div>
-            <button class="float-left" @click="onDcnx()">
-              Deconnexion
-            </button>
-            <button variant="dark" class="float-right" type="submit">
-              Connexion
-            </button>
-        </div>
-      </form>
+<main>
+    <header>
+        <img class="top-0 " src="../../public/img/sign.jpg" alt="">
+     
+    </header>
+    
+</main>
+    
+
 </template>
 
 <script>
@@ -47,14 +31,13 @@ import {
 
 
     export default {   
+        name: 'Connexion',
         data(){ // Données de la vue
-            return{                
+          return{                
                 user:{          // user se connectant
                     email:null,
                     password:null
                 },
-                message:null, // Message de connexion
-                
             }
         },
 
@@ -67,12 +50,6 @@ import {
                 }else{
                     this.message = "User non connecté : "+this.user.email;
                 }
-
-            // Appel de la liste des pays
-            this.getPays();
-
-            // Appel de la liste des pays synchronisée
-            this.getPaysSynchro();
         },
 
         methods:{

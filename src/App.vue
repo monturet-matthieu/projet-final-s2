@@ -15,7 +15,10 @@ import Header from "./components/layout/Header.vue";
       <RouterLink to="/social">Social</RouterLink>
       <RouterLink to="/parametres">Paramètres</RouterLink>
       <RouterLink to="/cgu">CGU</RouterLink>
+      <br>
+      <RouterLink to="/connexion">Se connnecter</RouterLink>
       <BarreNav />
+      
     </nav>
   </header>
   <Footer />
