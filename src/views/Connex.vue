@@ -16,7 +16,7 @@
 //  getAuth : Fonction générale d'authentification
 //  signOut : Se deconnecter
 //  onAuthStateChanged : connaitre le statut de l'utilisateur (connecté ou non)
-import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js',
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js';
 
 // Bibliothèque Firestore : import des fonctions
 import { 
@@ -27,7 +27,7 @@ import {
     addDoc, 
     updateDoc, 
     deleteDoc, 
-    onSnapshot } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js'
+    onSnapshot } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js';
 
 
     export default {   

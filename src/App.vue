@@ -16,7 +16,7 @@ import Header from "./components/layout/Header.vue";
       <RouterLink to="/parametres">Paramètres</RouterLink>
       <RouterLink to="/cgu">CGU</RouterLink>
       <br>
-      <RouterLink to="/connexion">Se connnecter</RouterLink>
+      <RouterLink to="/connexion">Se connecter</RouterLink>
       <BarreNav />
       
     </nav>
