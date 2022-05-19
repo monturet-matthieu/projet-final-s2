@@ -1,9 +1,35 @@
 <template>
 <main>
-    <header>
+    <body>
+        <h5>Firebase - Se connecter</h5>
+            <form @submit.prevent="onCnx()">
+                <div class="input-group mb-3">            
+                    <div class="input-group-prepend">
+                        <button class="btn btn-dark">Email :</button>
+                    </div>
+                    <input class="form-control" type="text" v-model="user.email" required />
+                </div>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <button  class="btn btn-dark">Mot de passe :</button>
+                    </div>
+                    <input class="form-control" type="password" v-model="user.password" required />
+                </div>
+                <div class="alert alert-warning text-center mb-3" v-if="message!=null" >
+                    {{ message }}
+                </div>
+                <div>
+                    <button class="float-left" @click="onDcnx()">
+                        Deconnexion
+                    </button>
+                    <button variant="dark" class="float-right" type="submit">
+                        Connexion
+                    </button>
+                </div>
+            </form>
         <img class="top-0 " src="../../public/img/sign.jpg" alt="">
      
-    </header>
+    </body>
     
 </main>
     
@@ -16,7 +42,7 @@
 //  getAuth : Fonction générale d'authentification
 //  signOut : Se deconnecter
 //  onAuthStateChanged : connaitre le statut de l'utilisateur (connecté ou non)
-import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js';
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js'
 
 // Bibliothèque Firestore : import des fonctions
 import { 
@@ -27,7 +53,7 @@ import {
     addDoc, 
     updateDoc, 
     deleteDoc, 
-    onSnapshot } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js';
+    onSnapshot } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
 
 
     export default {   
