@@ -1,4 +1,4 @@
- <script setup>
+<script setup>
 import { RouterLink, RouterView } from "vue-router";
 import BarreNav from "./components/BarreNav.vue";
 import Footer from "./components/layout/Footer.vue";
@@ -23,13 +23,13 @@ import Header from "./components/layout/Header.vue";
 
   <RouterView />
 
-  <div class="bg-white flex space-x-16 py-5 px-10 fixed bottom-0">
-    <img src="../public/icon/menu-profil.webp" class="h-6 w-auto" alt="" />
-    <img src="../public/icon/menu-quetes.webp" class="h-6 w-auto" alt="" />
-    <img src="../public/icon/menu-communaute.webp" class="h-6 w-auto" alt="" />
-    <img src="../public/icon/menu-parametres.webp" class="h-2 w-auto" alt="" />
+  <div class="bg-white flex space-x-16 py-5 px-10 w-full fixed bottom-0 justify-center align-baseline">
+    <RouterLink to="/profil"><img src="../public/icon/menu-profil.webp" class="h-6 w-auto" alt="" /></RouterLink>
+    <RouterLink to="/"><img src="../public/icon/menu-quetes.webp" class="h-6 w-auto" alt="" /></RouterLink>
+    <RouterLink to="/social"><img src="../public/icon/menu-communaute.webp" class="h-6 w-auto" alt="" /></RouterLink>
+    <RouterLink to="/parametres"><img src="../public/icon/menu-parametres.webp" class="h-2 w-auto mt-2" alt="" /></RouterLink>
   </div>
   <footer>
     <Footer />
   </footer>
-</template> 
+</template>
