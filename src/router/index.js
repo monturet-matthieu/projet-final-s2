@@ -6,6 +6,7 @@ import Parametres from '../views/Parametres.vue'
 import Profil from '../views/Profil.vue'
 import Social from '../views/Social.vue'
 import Connexion from '../views/Connex.vue'
+import Arrivee1 from '../views/Arrivee1.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +18,7 @@ const router = createRouter({
     { path: '/profil', name: 'Profil', component: Profil },
     { path: '/social', name: 'Social', component: Social },
     { path: '/connexion', name: 'Connexion', component: Connexion },
+    { path: '/Arrivee1', name: 'Arrivee1', component: Arrivee1 },
   ]
 })
 
