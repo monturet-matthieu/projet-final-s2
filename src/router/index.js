@@ -7,6 +7,8 @@ import Profil from '../views/Profil.vue'
 import Social from '../views/Social.vue'
 import Connexion from '../views/Connex.vue'
 import Arrivee1 from '../views/Arrivee1.vue'
+import Arrivee2 from '../views/Arrivee2.vue'
+import Arrivee3 from '../views/Arrivee3.vue'
 import QuetesPerso from '../views/QuetesPerso.vue'
 
 const router = createRouter({
@@ -20,6 +22,8 @@ const router = createRouter({
     { path: '/social', name: 'Social', component: Social },
     { path: '/connexion', name: 'Connexion', component: Connexion },
     { path: '/arrivee1', name: 'Arrivee1', component: Arrivee1 },
+    { path: '/arrivee2', name: 'Arrivee2', component: Arrivee2 },
+    { path: '/arrivee3', name: 'Arrivee3', component: Arrivee3 },
     { path: '/quetesPerso', name: 'QuetesPerso', component: QuetesPerso },
   ]
 })

@@ -76,7 +76,7 @@
         src="/public/icon/precedent-orange.webp"
         alt="precedent"
       />
-      <a href="/src/views/Arrivee2.vue">
+      <a href="./Arrivee2">
         <img class="w-14 ml-24" src="/public/icon/next.webp" alt="suivant" />
       </a>
     </div>
