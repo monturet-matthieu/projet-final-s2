@@ -1,6 +1,8 @@
 <template>
   <h1>Profil</h1>
   <h2>jm-italia25</h2>
+  <img class="w-2/4" src="/public/img/avatar.webp" alt="" />
+  <img class="w-2/3" src="/public/img/upgrade.png" alt="bouton go premium" />
   <h3>Fortune</h3>
   <h3>Éti’quêtes abandonnées</h3>
   <h3>Éti’quêtes créées</h3>
@@ -8,7 +10,7 @@
   <h3>Fortune</h3>
 
   <h2>Statistiques</h2>
-  <div class="text-xl font-gothic grid grid-cols-3">
+  <div class="text-base font-gothic grid grid-cols-3">
     <div class="content-center">
       <h4 class="">Sport</h4>
       <img class="w-3/4" src="/public/img/sport.webp" alt="catégorie sport" />
@@ -82,13 +84,13 @@
       <img class="w-3/4" src="/public/img/art.webp" alt="catégorie art" />
     </div>
     <div>
-      <h4>Dépassement de soi</h4>
+      <h4>Dépass. de soi</h4>
       <img
         class="w-3/4"
-        src="/public/img/economique.webp"
+        src="/public/img/depassement-de-soi.webp"
         alt="catégorie organisation"
       />
-      <img class="w-16" src="/public/icon/bloque.webp" alt="cadenas" />
+      <img class="w-8" src="/public/icon/bloque.webp" alt="cadenas" />
     </div>
     <div>
       <h4>Economique</h4>
@@ -97,7 +99,7 @@
         src="/public/img/economique.webp"
         alt="catégorie economique"
       />
-      <img class="w-16" src="/public/icon/bloque.webp" alt="" />
+      <img class="w-8" src="/public/icon/bloque.webp" alt="" />
     </div>
     <div>
       <h4>Numérique</h4>
@@ -106,7 +108,7 @@
         src="/public/img/numerique.webp"
         alt="catégorie numérique"
       />
-      <img class="w-16" src="/public/icon/bloque.webp" alt="" />
+      <img class="w-8" src="/public/icon/bloque.webp" alt="" />
     </div>
   </div>
 
@@ -115,7 +117,7 @@
       src="/public/img/ads-l.png"
       border="0"
       alt="cadrant publicitaire"
-      class="justify-center"
+      class="justify-center p-8"
   /></a>
 </template>
 <script>

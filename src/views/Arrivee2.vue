@@ -24,11 +24,18 @@
       </a>
     </div>
     <img
-      class="p-20"
+      class="pl-20 pr-20 mt-10 mb-10"
       src="/public/img/arrivee2-repaire.webp"
       alt="page arrive 2/3"
     />
   </div>
+  <a href="https://www.google.com/intl/fr_fr/adsense/start/" target="_blank"
+    ><img
+      src="/public/img/ads-l.png"
+      border="0"
+      alt="cadrant publicitaire"
+      class="justify-center p-8"
+  /></a>
 </template>
 
 <script>
