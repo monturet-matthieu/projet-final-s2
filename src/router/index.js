@@ -10,6 +10,8 @@ import Arrivee1 from '../views/Arrivee1.vue'
 import Arrivee2 from '../views/Arrivee2.vue'
 import Arrivee3 from '../views/Arrivee3.vue'
 import QuetesPerso from '../views/QuetesPerso.vue'
+import Messagerie from '../views/Messagerie.vue'
+import Chat from '../views/Chat.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,7 +26,9 @@ const router = createRouter({
     { path: '/arrivee1', name: 'Arrivee1', component: Arrivee1 },
     { path: '/arrivee2', name: 'Arrivee2', component: Arrivee2 },
     { path: '/arrivee3', name: 'Arrivee3', component: Arrivee3 },
-    { path: '/quetesPerso', name: 'QuetesPerso', component: QuetesPerso },
+    { path: '/quetesperso', name: 'QuetesPerso', component: QuetesPerso },
+    { path: '/messagerie', name: 'Messagerie', component: Messagerie },
+    { path: '/chat', name: 'Chat', component: Chat },
   ]
 })
 
