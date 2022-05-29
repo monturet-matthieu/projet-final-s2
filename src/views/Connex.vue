@@ -2,36 +2,34 @@
 <main>
     
     <body class="bg-Primaire">
-        <h5 class="relative z-10">Se connecter</h5>
-            <form @submit.prevent="onCnx()" class="absolute mt-64 z-10 text-Primaire">
-                <div class="input-group mb-3">            
+            <form @submit.prevent="onCnx()" class="absolute mt-64 content-center z-10 text-Primaire align-middle">
+                <div class="input-group mb-3 ">            
                     <div class="input-group-prepend">
-                        <button class="btn btn-dark">Email :</button>
+                        <button class="btn btn-dark"></button>
                     </div>
-                    <input class="form-control" type="text" v-model="user.email" required />
+                    <input class="form-control bg-Primaire text-Secondaire border-2 rounded-14xl ml-16 w-56 h-10 z-30 align-middle" placeholder="E-mail" type="text" v-model="user.email" required />
                 </div>
-                <div class="input-group mb-3 ">
+                <div class="input-group mb-3 ml-16">
                     <div class="input-group-prepend">
-                        <button  class="btn btn-dark">Mot de passe :</button>
+                        <button  class="btn btn-dark"></button>
                     </div>
-                    <input class="form-control" type="password" v-model="user.password" required />
+                    <input class="form-control rounded-14xl w-56 bg-Primaire text-Secondaire h-10" type="password" placeholder="Mot de passe" v-model="user.password" required />
                 </div>
-                <div class="alert alert-warning text-center mb-3" v-if="message!=null" >
+                <div class="alert alert-warning text-center mb-3 "  v-if="message!=null" >
                     {{ message }}
                 </div>
                 <div>
-                    <button class="float-left" @click="onDcnx()">
-                        Deconnexion
-                    </button>
-                    <button variant="dark" class="float-right" type="submit">
-                        Connexion
+                    
+                    <button variant="dark" class="float-right bg-Boutons w-48 h-14 align-middle px-6 rounded-14xl font-bebas-neue text-4xl "  type="submit">
+                        Se connecter
                     </button>
                 </div>
             </form>
-        <a href="Accueil.vue">
-            <img src="../../public/icon/logo-final.png" class="relative -mt-64 z-20 w-40" alt="">
-        </a>
-        <img class="relative -mt-56" src="../../public/img/sign.jpg" alt="">
+        <router link to="/">
+            <img src="../../public/icon/logo-final-w.png" class="relative -mt-44  ml-3 w-20  z-20 w-40" alt="">
+        </router>
+            
+        <img class="relative -mt-48 pt-20 mb-32" src="../../public/img/sign.jpg" alt="">
      
     </body>
     
