@@ -54,7 +54,5 @@ import Header from "./components/layout/Header.vue";
         alt=""
     /></RouterLink>
   </div>
-  <footer>
-    <Footer />
-  </footer>
+  <footer></footer>
 </template>
