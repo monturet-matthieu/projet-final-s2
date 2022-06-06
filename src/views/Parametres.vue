@@ -1,7 +1,103 @@
 <template>
-    <button class="float-left text-Important" @click="onDcnx()">
-                        Deconnexion
-                    </button>
+  <div
+    class="grid grid-cols-1 lg:text-lg xl:text-xl lg:grid-cols-2 xl:grid-cols-4"
+  >
+    <div>
+      <h2 class="text-2xl font-bold mt-14 mb-2 ml-5">Profil</h2>
+      <div
+        class="
+          bg-white
+          text-Texte text-center
+          font-bold
+          flex flex-col
+          w-3/4
+          mx-auto
+          content-center
+          shadow-lg
+        "
+      >
+        <a class="p-5" href="">Contrôle du compte</a>
+        <div class="h-[1px] bg-slate-100"></div>
+        <a class="p-5" href="">Mes catégories</a>
+        <div class="h-[1px] bg-slate-100"></div>
+        <a class="p-5" href="">Lien d'amitié</a>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-bold mb-2 ml-5 mt-14">Application</h2>
+      <div
+        class="
+          bg-white
+          text-Texte text-center
+          font-bold
+          flex flex-col
+          w-3/4
+          mx-auto
+          content-center
+          shadow-lg
+        "
+      >
+        <a class="p-5" href="">Informations</a>
+        <div class="h-[1px] bg-slate-100"></div>
+        <a class="p-5" href="">Autorisations</a>
+        <div class="h-[1px] bg-slate-100"></div>
+        <a class="p-5" href="">Confidentialité</a>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-bold mb-2 ml-5 mt-14">Connexion</h2>
+      <div
+        class="
+          bg-white
+          text-Texte text-center
+          font-bold
+          flex flex-col
+          w-3/4
+          mx-auto
+          content-center
+          shadow-lg
+        "
+      >
+        <a class="p-5" href="">Infos sur les mises à jour</a>
+        <div class="h-[1px] bg-slate-100"></div>
+        <a class="p-5" href="./">Contact & soutient</a>
+        <div class="h-[1px] bg-slate-100"></div>
+        <a class="p-5" href="./CGU">Conditions générales d'utilisation</a>
+        <div class="h-[1px] bg-slate-100"></div>
+        <a class="p-5" href="./CGV">Conditions générales de vente</a>
+        <div class="h-[1px] bg-slate-100"></div>
+        <a class="p-5" href="./Mentions">Mentions légales</a>
+        <div class="h-[1px] bg-slate-100"></div>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="text-2xl font-bold mb-2 ml-5 mt-14">Autres</h2>
+      <div
+        class="
+          bg-white
+          text-Texte text-center
+          font-bold
+          flex flex-col
+          w-3/4
+          mx-auto
+          content-center
+          shadow-lg
+          mb-24
+        "
+      >
+        <a class="p-5" href="">Passer en mode premium</a>
+        <div class="h-[1px] bg-slate-100"></div>
+        <a class="p-5" href="">Changer de compte</a>
+        <div class="h-[1px] bg-slate-100"></div>
+        <button class="p-5 text-Important font-semibold" @click="onDcnx()">
+          Deconnexion
+        </button>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -10,62 +106,67 @@
 //  getAuth : Fonction générale d'authentification
 //  signOut : Se deconnecter
 //  onAuthStateChanged : connaitre le statut de l'utilisateur (connecté ou non)
-import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js'
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js";
 
 // Bibliothèque Firestore : import des fonctions
-import { 
-    getFirestore, 
-    collection, 
-    doc, 
-    getDocs, 
-    addDoc, 
-    updateDoc, 
-    deleteDoc, 
-    onSnapshot } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
+import {
+  getFirestore,
+  collection,
+  doc,
+  getDocs,
+  addDoc,
+  updateDoc,
+  deleteDoc,
+  onSnapshot,
+} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
 
+export default {
+  name: "Connexion",
+  data() {
+    // Données de la vue
+    return {
+      user: {
+        // user se connectant
+        email: null,
+        password: null,
+      },
+    };
+  },
 
-    export default {   
-        name: 'Connexion',
-        data(){ // Données de la vue
-          return{                
-                user:{          // user se connectant
-                    email:null,
-                    password:null
-                },
-            }
-        },
-
-        mounted(){ // Montage de la vue
-            // Rechercher si un user est déjà connecté
-                let user = getAuth().currentUser;
-                if(user){
-                    this.user = user;
-                    this.message = "User déjà connecté : "+this.user.email;
-                }else{
-                    this.message = "User non connecté : "+this.user.email;
-                }
-        },
-
-        methods:{
-           
-            onDcnx(){
-                // Se déconnecter
-                signOut(getAuth())
-                .then(response =>{
-                    this.user = getAuth().currentUser;
-                    this.user = {
-                        email:null,
-                        password:null
-                    };
-                    console.log("user deconnecté ", this.user);        
-                    this.message = 'user non connecté';
-                })
-                .catch(error=>{
-                    console.log('erreur deconnexion ', error);
-                })
-
-            },
-        }
+  mounted() {
+    // Montage de la vue
+    // Rechercher si un user est déjà connecté
+    let user = getAuth().currentUser;
+    if (user) {
+      this.user = user;
+      this.message = "User déjà connecté : " + this.user.email;
+    } else {
+      this.message = "User non connecté : " + this.user.email;
     }
+  },
 
+  methods: {
+    onDcnx() {
+      // Se déconnecter
+      signOut(getAuth())
+        .then((response) => {
+          this.user = getAuth().currentUser;
+          this.user = {
+            email: null,
+            password: null,
+          };
+          console.log("user deconnecté ", this.user);
+          this.message = "user non connecté";
+        })
+        .catch((error) => {
+          console.log("erreur deconnexion ", error);
+        });
+    },
+  },
+};
 </script>

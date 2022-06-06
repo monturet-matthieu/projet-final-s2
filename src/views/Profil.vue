@@ -108,7 +108,7 @@
         src="/public/img/numerique.webp"
         alt="catégorie numérique"
       />
-      <img class="w-8" src="/public/icon/bloque.webp" alt="" />
+      <img class="w-8" src="/public/icon/bloque.svg" alt="icone indiquant que le contenu est bloqué" />
     </div>
   </div>
 

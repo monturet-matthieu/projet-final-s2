@@ -10,6 +10,7 @@ import Header from "./components/layout/Header.vue";
     <Header />
     <nav class="flex-col space-x-6 mb-5 w-screen pt-4 bg-Primaire">
       <RouterLink to="/">Accueil</RouterLink>
+      <RouterLink to="/about">À propos</RouterLink>
       <RouterLink to="/mentions">Mentions légales</RouterLink>
       <RouterLink to="/profil">Profil</RouterLink>
       <RouterLink to="/social">Social</RouterLink>
@@ -39,19 +40,19 @@ import Header from "./components/layout/Header.vue";
     "
   >
     <RouterLink to="/profil"
-      ><img src="../public/icon/menu-profil.webp" class="h-6 w-auto" alt=""
+      ><img src="../public/icon/menu-profil.svg" class="h-6 w-auto" alt="icone menant à la page profil"
     /></RouterLink>
     <RouterLink to="/"
-      ><img src="../public/icon/menu-quetes.webp" class="h-6 w-auto" alt=""
+      ><img src="../public/icon/menu-quetes.svg" class="h-6 w-auto" alt="icone menant à la page quêtes"
     /></RouterLink>
     <RouterLink to="/social"
-      ><img src="../public/icon/menu-communaute.webp" class="h-6 w-auto" alt=""
+      ><img src="../public/icon/menu-communaute.svg" class="h-6 w-auto" alt="icone menant à la page social"
     /></RouterLink>
     <RouterLink to="/parametres"
       ><img
-        src="../public/icon/menu-parametres.webp"
+        src="../public/icon/menu-parametres.svg"
         class="h-2 w-auto mt-2"
-        alt=""
+        alt="icone menant aux paramètres"
     /></RouterLink>
   </div>
   <footer></footer>

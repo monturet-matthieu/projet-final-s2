@@ -79,7 +79,7 @@
                 <button>
                   <img
                     class="w-7"
-                    src="/public/icon/send.png"
+                    src="/public/icon/send.svg"
                     alt="bouton envoyer"
                   />
                 </button>
@@ -106,7 +106,7 @@
                       title="Voir ce fil"
                     >
                       <img
-                        src="/public/icon/new-message.png"
+                        src="/public/icon/new-message.svg"
                         alt="voir le fil de conversation"
                       />
                     </button>
@@ -117,7 +117,7 @@
                       title="Supprimer ce fil"
                     >
                       <img
-                        src="/public/icon/delete-message.png"
+                        src="/public/icon/delete-message.svg"
                         alt="supprimer le fil de conversation"
                       />
                     </button>
@@ -158,7 +158,7 @@
                 <button class="btn btn-dark" @click="sendMsg()">
                   <img
                     class="w-10 my-auto"
-                    src="/public/icon/send.png"
+                    src="/public/icon/send.svg"
                     alt=""
                   />
                 </button>

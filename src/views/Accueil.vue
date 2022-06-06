@@ -7,9 +7,11 @@ import Etiquete from "../components/quetes/Etiquete.vue";
     <body>
       <h1 class="font-bold">Éti’quêtes à effectuer</h1>
       <div class="flex mx-16 my-4 justify-center gap-2 bg-Boutons p-2 rounded-14xl">
-        <a class="bg-Primaire p-3 rounded-6xl" href="/">Aléatoires</a>
-        <a class="p-3 rounded-6xl" href="quetesperso">Personnelles</a>
+        <RouterLink class="bg-Primaire p-3 rounded-6xl" to="/">Aléatoires</RouterLink>
+        <RouterLink class="p-3 rounded-6xl" to="/quetesperso">Personnelles</RouterLink>
       </div>
+      <RouterLink to="/ajoutquete"><img src="../../public/icon/new-message.svg" class="fixed left-10 right-3" alt="icone menant vers la page d'ajout de quêtes"></RouterLink>
+
       <h3>JOURNALIÈRES</h3>
         <Etiquete />
       <h3>HEBDOMADAIRES</h3>

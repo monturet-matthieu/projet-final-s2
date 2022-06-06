@@ -21,11 +21,11 @@
       <a href="./Arrivee3.vue">
         <img
           class="w-14 mr-24"
-          src="/public/icon/precedent-orange.webp"
+          src="/public/icon/precedent-orange.svg"
           alt="precedent"
       /></a>
       <a href="./Accueil">
-        <img class="w-14 ml-24" src="/public/icon/next.webp" alt="suivant" />
+        <img class="w-14 ml-24" src="/public/icon/next.svg" alt="suivant" />
       </a>
     </div>
     <img

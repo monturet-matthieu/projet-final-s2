@@ -26,7 +26,7 @@
                 </div>
             </form>
         <router link to="/">
-            <img src="../../public/icon/logo-final-w.png" class="relative -mt-44  ml-3 w-20 z-20" alt="">
+            <img src="../../public/icon/logo-final-w.svg" class="relative -mt-44  ml-3 w-20 z-20" alt="">
         </router>
             
         <img class="relative -mt-48 pt-20 mb-32" src="../../public/img/sign.jpg" alt="">

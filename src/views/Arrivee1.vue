@@ -73,11 +73,11 @@
     <div class="flex flex-row justify-center mt-6">
       <img
         class="w-14 mr-24"
-        src="/public/icon/precedent-orange.webp"
+        src="/public/icon/precedent-orange.svg"
         alt="precedent"
       />
       <a href="./Arrivee2">
-        <img class="w-14 ml-24" src="/public/icon/next.webp" alt="suivant" />
+        <img class="w-14 ml-24" src="/public/icon/next.svg" alt="suivant" />
       </a>
     </div>
     <img
