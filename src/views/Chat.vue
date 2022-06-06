@@ -149,7 +149,7 @@
               "
             >
               <textarea
-                class="w-3/4 text-center my-auto"
+                class="w-3/4 text-center my-auto text-black"
                 rows="3"
                 placeholder="[Saisissez votre message]"
                 v-model="message"
@@ -168,31 +168,67 @@
             <div v-for="disc in chat" :key="disc.id">
               <div v-if="disc.id == discussion.id">
                 <div v-for="msg in sortMsgByDate(disc.msg)" :key="msg.date">
-                  <div class="row mb-3" v-if="msg.by == user.uid">
-                    <div class="col-4">
-                      <div class="text-left ml-3">
-                        <img class="w-8" :src="userInfo[0].avatar" />
-                        {{ userInfo[0].login }} - {{ dateFr(msg.date) }}
-                      </div>
-                    </div>
-                    <div class="col-8 text-center mb-1">
-                      <div class="recep">
-                        <p>{{ msg.contenu }}</p>
-                      </div>
-                    </div>
+                  <div
+                    class="mb-1 mr-auto my-5 gap-1 flex flex-wrap"
+                    v-if="msg.by == user.uid"
+                  >
+                    <p
+                      class="
+                        font-semibold
+                        rounded-8xl
+                        p-5
+                        bg-bleu10%
+                        text-Secondaire
+                      "
+                    >
+                      {{ msg.contenu }}
+                    </p>
+
+                    <img
+                      class="
+                        w-8
+                        h-8
+                        mt-auto
+                        rounded-7xl
+                        aspect-square
+                        object-cover
+                      "
+                      :src="userInfo[0].avatar"
+                    />
+
+                    <!-- {{ userInfo[0].login }} - {{ dateFr(msg.date) }} -->
                   </div>
 
-                  <div class="row mb-3" v-if="msg.by == userSelected.uid">
-                    <div class="col-8 text-center">
-                      <div class="w-70 emet">
+                  <div class="my-5 ml-3">
+                    <div
+                      class="mb-1 gap-1 flex flex-wrap"
+                      v-if="msg.by == userSelected.uid"
+                    >
+                      <img
+                        class="
+                          w-8
+                          h-8
+                          mt-auto
+                          rounded-7xl
+                          aspect-square
+                          object-cover
+                        "
+                        :src="userSelected.avatar"
+                      />
+                      <div
+                        class="
+                          text-left
+                          font-semibold
+                          rounded-8xl
+                          p-5
+                          bg-Secondaire
+                        "
+                      >
                         <p>{{ msg.contenu }}</p>
                       </div>
                     </div>
-                    <div class="col-4">
-                      <div class="text-left ml-3">
-                        <img class="avatar" :src="userSelected.avatar" />
-                        {{ userSelected.login }} - {{ dateFr(msg.date) }}
-                      </div>
+                    <div class="text-left ml-3">
+                      <!-- {{ userSelected.login }} - {{ dateFr(msg.date) }} -->
                     </div>
                   </div>
                 </div>
@@ -442,7 +478,7 @@ export default {
         // Si la date du message a est avant celle du message b on retourne 1
         if (a.date < b.date) return 1;
         // Si la date du message a est après celle du message b on retourne -1
-        if (a.date > b.date) return -1;
+        if (a.date > b.date) return 1;
         // Sinon ni avant ni après on retourne 0
         return 0;
       });
@@ -450,8 +486,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-</style>
-
-
