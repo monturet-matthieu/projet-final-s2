@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Accueil from '../views/Accueil.vue'
+import About from '../views/Apropos.vue'
+import AjoutQuete from '../views/AjoutQuete.vue'
 import Mentions from '../views/Mentions.vue'
 import CGU from '../views/CGU.vue'
 import CGV from '../views/CGV.vue'
@@ -18,6 +20,8 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     { path: '/', name: 'home', component: Accueil },
+    { path: '/about', name: 'About', component: About },
+    { path: '/ajoutquete', name: 'AjoutQuete', component: AjoutQuete },
     { path: '/mentions', name: 'Mentions', component: Mentions },
     { path: '/cgu', name: 'CGU', component: CGU },
     { path: '/cgv', name: 'CGV', component: CGV },
