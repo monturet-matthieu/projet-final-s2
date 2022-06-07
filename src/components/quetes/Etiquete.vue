@@ -2,14 +2,14 @@
     <div>
         <div class="bg-bleu80% flex pb-2 mr-4 -ml-16 rounded-9xl">
             <img class="ml-6" src="../../../public/icon/rond-etiquete.svg" alt="rond de validation vide">
-            <div class="bg-white flex flex-col ml-6 mt-2 rounded-9xl">
+            <div class="bg-white flex flex-col ml-6 mt-2 w-full mr-6 rounded-9xl">
                 <div class="flex space-x-36 mr-8 mt-2">
-                    <h5 class="text-gray-500 ml-5 font-light">Organisation</h5>
-                    <span class="text-Important font-medium">+20 XP</span>
+                    <h5 class="text-gray-500 ml-5 font-light">{{categorie}}</h5>
+                    <span class="text-Important font-medium">{{xp}} XP</span>
                 </div>
 
                 <div class="mt-4">
-                    <h3 class="text-Texte text-center font-semibold">Planifie 3 tâches sur papier.</h3>
+                    <h3 class="text-Texte text-center font-semibold">{{nom}}</h3>
                 </div> 
 
                 <div class="pb-0.5 bg-gray-300 mx-12 mt-6 mb-4"></div>
@@ -41,9 +41,11 @@ import {
   where, // Permet de demander un filtrage pour une query
 } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js";
 
-export default {
-    data(){
-        
-    },
+export default{
+    props: {
+        nom: String,
+        categorie: String,
+        xp: Number
+    }
 }
 </script>
