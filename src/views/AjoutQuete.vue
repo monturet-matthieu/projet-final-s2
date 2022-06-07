@@ -5,17 +5,17 @@
 
 <!-- liste synchro des quetes -->
 
-<div class="px-20">
-  <div>
+<div class="py-20">
+  <div class="px-10">
             <h5 class="font-league-gothic text-2xl text-violet">Liste des quetes - Liste synchronisée</h5>
             </div>
-            <form class='mb-3'>
-            <h3 class="font-league-gothic text-xl text-fushia">Nouveaux quetes</h3>
-            <div class="input-group">
+            <form class='mb-3 px-10'>
+            <h3 class="font-league-gothic text-xl text-fushia px-10">Nouveaux quetes</h3>
+            <div class="input-group px-10">
                 <div class="input-group-prepend">
                 <span class="input-group-text">Nom</span>
                 </div>
-                <input name="nom" type="text" v-model='nom' class="form-control" required  />
+                <input name="nom" type="text" v-model='nom' class="form-control w-96" required  />
                 <label for="nom">Nom </label>
 
                 <input name="categorie" type="text" v-model='categorie' class="form-control" required />
@@ -35,7 +35,7 @@
                 </button>
             </div>
             </form>
-            <table class="table">
+            <table class="table w-full text-center">
             <thead class="thead-dark">
                 <tr>
                 <th scope="col">Nom</th>
@@ -48,8 +48,8 @@
             <tbody>
               
                 <tr v-for='quetes in listeQuetes' :key='quetes.id'>
-                <td >
-                    <input type='text' v-model='quetes.nom'  />
+                <td>
+                    <input  class="w-96" type='text' v-model='quetes.nom'  />
                 </td>
                 <td >
                     <input type='text' v-model='quetes.categorie'  />
@@ -116,7 +116,15 @@ export default {
   data() {
     return {
       listeQuetes: [],
-      nom:null
+      quetes:{
+        nom:null,
+        duree:null,
+        categorie:null,
+        etat:null,
+        xp:null,
+
+      }
+      
       
     };
   },
@@ -145,12 +153,31 @@ export default {
       const firestore = getFirestore();
       // Base de données (collection)  document pays
       const dbQuetes= collection(firestore, "quetes");
+      const dbEtat= collection(firestore, "etat");
+      const dbDuree= collection(firestore, "duree");
+      const dbCategorie= collection(firestore, "categorie");
+      const dbXp= collection(firestore, "xp");
       // On passe en paramètre format json
       // Les champs à mettre à jour
       // Sauf le id qui est créé automatiquement    
-      const docRef = await addDoc(dbQuetes,{
-          nom: this.nom
+      const docRef = await addDoc(dbQuetes, {
+          nom: this.nom,
+          etat:this.etat,
+          categorie:this.categorie,
+          duree:this.duree,
+          xp:this.xp,
+
+          
       })
+
+     
+      // const docRef = await addDoc(dbEtat, {        
+      //    etat: this.etat
+         
+      // })
+//  duree: this.duree
+//           xp: this.xp
+//           categorie: this.categorie
       console.log('document créé avec le id : ', docRef.id);
     },
 
