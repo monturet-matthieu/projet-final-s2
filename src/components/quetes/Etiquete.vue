@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div class="bg-bleu80% flex pb-2 mr-4 -ml-16 rounded-9xl">
+        <div class="bg-bleu80% flex pb-2  -ml-16 rounded-9xl ">
             <img class="ml-6" src="../../../public/icon/rond-etiquete.svg" alt="rond de validation vide">
-            <div class="bg-white flex flex-col ml-6 mt-2 w-full mr-6 rounded-9xl">
-                <div class="flex space-x-36 mr-8 mt-2">
-                    <h5 class="text-gray-500 ml-5 font-light">{{categorie}}</h5>
-                    <span class="text-Important font-medium">{{xp}} XP</span>
+            <div class="bg-white flex flex-col ml-6 mt-2 m-4  rounded-9xl">
+                <div class="flex gap-20  mr-8 mt-2">
+                    <h5 class="text-gray-500 ml-5 font-light justify-start">{{categorie}}</h5>
+                    <span class="text-Important font-medium justify-end">{{xp}} XP</span>
                 </div>
 
                 <div class="mt-4">

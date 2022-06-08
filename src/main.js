@@ -2,6 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import './index.css'
+import mitt from 'mitt';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
@@ -26,6 +27,9 @@ const appFirebase = initializeApp(firebaseConfig);
 const analytics = getAnalytics(appFirebase);
 
 const app = createApp(App)
+
+export const emitter = mitt();
+app.config.globalProperties.emitter = emitter;
 
 app.use(router)
 

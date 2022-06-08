@@ -6,12 +6,13 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
 <template>
   <main>
     <img
-      class="mx-auto w-1/2"
+      class="p-5 w-full"
       src="/public/img/barre-progression.png"
       alt="barre de progression"
     />
     <body>
       <h1 class="font-bold">Éti’quêtes à effectuer</h1>
+      <img src="/public/gif/quests.gif" class="w-60 mx-auto" alt="">
       <div
         class="flex mx-16 my-4 justify-center gap-2 bg-Boutons p-2 rounded-14xl"
       >
@@ -34,7 +35,7 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
       </h3>
 
       <!-- affichage liste synchro -->
-      <div class="space-y-10 pl-40 flex flex-col w-3/4 h-auto">
+      <div class="space-y-10  flex flex-col w-3/4 h-auto">
         <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
           ><Etiquete1
             v-if="quetes.duree === 'jour'"
@@ -60,7 +61,7 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
       <h3 class="font-gothic uppercase text-Secondaire font-bold text-lg">
         MENSUELLES
       </h3>
-      <div class="space-y-10 pl-40 flex flex-col w-3/4">
+      <div class="space-y-10 pl-40 flex flex-col w-3/4 h-auto">
         <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
           ><Etiquete1
             v-if="quetes.duree === 'mois'"
