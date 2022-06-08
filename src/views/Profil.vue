@@ -50,7 +50,15 @@
   </div>
 
   <h2 class="mt-10 font-gothic font-bold text-2xl ml-5 mb-5">Statistiques</h2>
-  <div class="text-base font-gothic grid grid-cols-3 gap-x-2 gap-y-4">
+  <div
+    class="
+      text-base
+      font-gothic
+      grid grid-cols-2
+      sm:grid-cols-3
+      gap-x-2 gap-y-4
+    "
+  >
     <div class="content-center">
       <h4 class="text-center font-gothic font-semibold">Sport</h4>
       <img
