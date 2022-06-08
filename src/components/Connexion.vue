@@ -1,29 +1,32 @@
 <template>
-        <form @submit.prevent="onCnx()">
-          <div class="input-group mb-3">            
-            <div class="input-group-prepend">
-                <button class="btn btn-dark">Email :</button>
-            </div>
-            <input class="form-control" type="text" v-model="user.email" required />
-          </div>
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <button  class="btn btn-dark">Mot de passe :</button>
-            </div>
-            <input class="form-control" type="password" v-model="user.password" required />
-          </div>
-          <div class="alert alert-warning text-center mb-3" v-if="message!=null" >
-            {{ message }}
-          </div>
-          <div>
-            <button class="float-left" @click="onDcnx()">
-              Deconnexion
-            </button>
-            <button variant="dark" class="float-right" type="submit">
-              Connexion
-            </button>
-        </div>
-      </form>
+  <form @submit.prevent="onCnx()">
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button class="btn btn-dark">Email :</button>
+      </div>
+      <input class="form-control" type="text" v-model="user.email" required />
+    </div>
+    <div class="input-group mb-3">
+      <div class="input-group-prepend">
+        <button class="btn btn-dark">Mot de passe :</button>
+      </div>
+      <input
+        class="form-control"
+        type="password"
+        v-model="user.password"
+        required
+      />
+    </div>
+    <div class="alert alert-warning text-center mb-3" v-if="message != null">
+      {{ message }}
+    </div>
+    <div>
+      <button class="float-left" @click="onDcnx()">Deconnexion</button>
+      <button variant="dark" class="float-right" type="submit">
+        Connexion
+      </button>
+    </div>
+  </form>
 </template>
 
 <script>

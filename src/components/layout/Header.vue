@@ -1,6 +1,10 @@
 <template>
-  <div class="flex w-screen h-16 p-5 items-center gap-80  bg-Primaire">
-    <img class="h-20 p-3 justify-start" src="/public/icon/logo-final.svg" alt="Logo updayme" />
+  <div class="flex w-screen h-16 p-5 items-center gap-80 bg-Primaire">
+    <img
+      class="h-20 p-3 justify-start"
+      src="/public/icon/logo-final.svg"
+      alt="Logo updayme"
+    />
     <a class="right-4 absolute" href="#"
       ><img
         class="w-5"

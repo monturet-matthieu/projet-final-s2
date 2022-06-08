@@ -21,7 +21,7 @@ import Arrivee1 from '../views/Arrivee1.vue'
 import Arrivee2 from '../views/Arrivee2.vue'
 import Arrivee3 from '../views/Arrivee3.vue'
 import QuetesPerso from '../views/QuetesPerso.vue'
-import Messagerie from '../views/Messagerie.vue'
+import Messagerie from '../views/Chat.vue'
 import Chat from '../views/Chat.vue'
 
 const router = createRouter({

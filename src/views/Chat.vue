@@ -1,8 +1,22 @@
 <template>
+  <div
+    class="
+      flex
+      mx-16
+      mb-4
+      justify-center
+      gap-8
+      bg-Boutons
+      p-2
+      pr-0
+      rounded-14xl
+    "
+  >
+    <a class="p-3 rounded-6xl" href="social">Stats</a>
+    <a class="bg-Primaire p-3 px-4 rounded-6xl" href="messagerie">Messagerie</a>
+  </div>
   <div class="mb-44">
     <div class="bg-bleu75% text-bleu10%">
-      <h5 class="text-white">Chat</h5>
-
       <div v-if="user == null">
         <h6 class="text-Important font-bebas-neue" role="alert">
           Vous devez être connecté pour parler à vos amis
