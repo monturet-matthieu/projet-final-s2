@@ -70,15 +70,10 @@
         alt="catégorie numerique"
       />
     </div>
-    <div class="flex flex-row justify-center mt-6">
-      <img
-        class="w-14 mr-24"
-        src="/public/icon/precedent-orange.svg"
-        alt="precedent"
-      />
-      <a href="./Arrivee2">
+    <div class="flex flex-row justify-end mt-6 mr-9">
+      <RouterLink to="Arrivee2">
         <img class="w-14 ml-24" src="/public/icon/next.svg" alt="suivant" />
-      </a>
+      </RouterLink>
     </div>
     <img
       class="pl-20 pr-20 mt-10 mb-10"

@@ -13,15 +13,15 @@
     <h4>Couleur de peau</h4>
     <h4>Cheveux</h4>
     <div class="flex flex-row justify-center mt-6">
-      <a href="./Arrivee1">
+      <RouterLink to="Arrivee1">
         <img
           class="w-14 mr-24"
           src="/public/icon/precedent-orange.svg"
           alt="precedent"
-      /></a>
-      <a href="./Arrivee3">
+      /></RouterLink>
+      <RouterLink to="Arrivee3">
         <img class="w-14 ml-24" src="/public/icon/next.svg" alt="suivant" />
-      </a>
+      </RouterLink>
     </div>
     <img
       class="pl-20 pr-20 mt-10 mb-10"

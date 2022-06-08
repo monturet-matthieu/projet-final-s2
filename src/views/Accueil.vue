@@ -1,5 +1,4 @@
 <script setup>
-import Etiquete from "../components/quetes/Etiquete.vue";
 import Etiquete1 from "../components/quetes/Etiquete.vue";
 </script>
 
@@ -26,86 +25,96 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
       <RouterLink to="/ajoutquete"
         ><img
           src="../../public/icon/new-message.svg"
-          class="fixed left-80 right-3 bottom-56"
+          class="fixed left-80 right-3 bottom-80"
           alt="icone menant vers la page d'ajout de quêtes"
       /></RouterLink>
 
-      <h3
-        class="
-          font-gothic
-          uppercase
-          text-Secondaire
-          font-bold
-          text-lg
-          ml-4
-          mb-4
-        "
-      >
-        JOURNALIÈRES
-      </h3>
+      <div>
+        <div class="flex space-x-6 mt-10">
+          <h3
+            class="
+              font-gothic
+              uppercase
+              text-Secondaire
+              font-bold
+              text-lg
+              ml-4
+              mb-4
+            "
+          >
+            JOURNALIÈRES
+          </h3>
+          <img class="mb-8 -mt-2" src="../../public/icon/quot.svg" alt="">
+        </div>
 
-      <!-- affichage liste synchro -->
-      <div class="space-y-10 flex flex-col w-10/12">
-        <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
-          ><Etiquete1
-            v-if="quetes.duree === 'jour'"
-            :nom="quetes.nom"
-            :categorie="quetes.categorie"
-            :xp="quetes.xp"
-        /></RouterLink>
-        <RouterView />
+        <!-- affichage liste synchro -->
+        <div class="space-y-10 flex flex-col w-10/12">
+          <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
+            ><Etiquete1
+              v-if="quetes.duree === 'jour'"
+              :nom="quetes.nom"
+              :categorie="quetes.categorie"
+              :xp="quetes.xp"
+          /></RouterLink>
+          <RouterView />
+        </div>
+
+        <div class="flex justify-end space-x-6 mr-4 -mt-80 -mb-96 -">
+          <img class="mb-8 -mt-2" src="../../public/icon/hebd.svg" alt="">
+          <h3
+            class="
+              font-gothic
+              uppercase
+              text-Secondaire
+              font-bold
+              text-lg
+              ml-4
+              mb-4
+            "
+          >
+            HEBDOMADAIRES
+          </h3>
+        </div>
+
+        <div class="flex flex-col space-y-10 w-10/12">
+          <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
+            ><Etiquete1
+              v-if="quetes.duree === 'semaine'"
+              :nom="quetes.nom"
+              :categorie="quetes.categorie"
+              :xp="quetes.xp"
+          /></RouterLink>
+          <RouterView />
+        </div>
+
+        <div class="flex space-x-6 mr-4 mt-10 -mb-96">
+        <h3
+          class="
+            font-gothic
+            uppercase
+            text-Secondaire
+            font-bold
+            text-lg
+            ml-4
+            mb-4
+          "
+        >
+          MENSUELLES
+        </h3>
+        <img class="mb-8 -mt-2" src="../../public/icon/mens.svg" alt="">
+        </div>
+
+        <div class="space-y-10 flex flex-col w-10/12">
+          <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
+            ><Etiquete1
+              v-if="quetes.duree === 'mois'"
+              :nom="quetes.nom"
+              :categorie="quetes.categorie"
+              :xp="quetes.xp"
+          /></RouterLink>
+          <RouterView />
+        </div>
       </div>
-
-      <h3
-        class="
-          font-gothic
-          uppercase
-          text-Secondaire
-          font-bold
-          text-lg
-          ml-4
-          mb-4
-        "
-      >
-        HEBDOMADAIRES
-      </h3>
-
-      <div class="space-y-10 flex flex-col w-10/12">
-        <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
-          ><Etiquete1
-            v-if="quetes.duree === 'semaine'"
-            :nom="quetes.nom"
-            :categorie="quetes.categorie"
-            :xp="quetes.xp"
-        /></RouterLink>
-        <RouterView />
-      </div>
-
-      <h3
-        class="
-          font-gothic
-          uppercase
-          text-Secondaire
-          font-bold
-          text-lg
-          ml-4
-          mb-4
-        "
-      >
-        MENSUELLES
-      </h3>
-
-      <div class="space-y-10 flex flex-col w-10/12">
-        <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
-          ><Etiquete1
-            v-if="quetes.duree === 'mois'"
-            :nom="quetes.nom"
-            :categorie="quetes.categorie"
-            :xp="quetes.xp"
-        /></RouterLink>
-        <RouterView />
-      </div>
-      <h2>Archives</h2>
     </body>
   </main>
 </template>

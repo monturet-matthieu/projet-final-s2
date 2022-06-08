@@ -16,7 +16,7 @@
       <Checkbox nom="Je souhaite me challenger sur des choses que je ne maîtrise pas encore" />
       <Checkbox nom="Je veux me reprendre en main, prendre soin de moi" />
 
-      
+      <Bouton nom="Envoyer">Ignorer</Bouton>
     </div>
     <div class="flex flex-row justify-center mt-6">
       <RouterLink to="./Arrivee2">
@@ -46,11 +46,12 @@
 
 <script>
 import Checkbox from '../components/checkbox.vue';
+import Bouton from '../components/Bouton.vue';
 export default {
     name: "Arrivee3",
     data() {
         return {};
     },
-    components: { Checkbox }
+    components: { Checkbox, Bouton }
 };
 </script>

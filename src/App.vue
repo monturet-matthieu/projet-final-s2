@@ -1,6 +1,5 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import BarreNav from "./components/BarreNav.vue";
 import Footer from "./components/layout/Footer.vue";
 import Header from "./components/layout/Header.vue";
 </script>
@@ -8,19 +7,6 @@ import Header from "./components/layout/Header.vue";
 <template>
   <header>
     <Header />
-    <nav class="flex-col space-x-6 mb-5 w-screen pt-4 bg-Primaire">
-      <RouterLink to="/">Accueil</RouterLink>
-      <RouterLink to="/about">À propos</RouterLink>
-      <RouterLink to="/mentions">Mentions légales</RouterLink>
-      <RouterLink to="/profil">Profil</RouterLink>
-      <RouterLink to="/social">Social</RouterLink>
-      <RouterLink to="/parametres">Paramètres</RouterLink>
-      <RouterLink to="/cgu">CGU</RouterLink>
-      <br />
-      <RouterLink to="/cgv">CGV</RouterLink>
-      <RouterLink to="/connexion">Se connecter</RouterLink>
-      <BarreNav />
-    </nav>
   </header>
 
   <RouterView />
