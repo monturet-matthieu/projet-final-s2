@@ -27,9 +27,9 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
       /></RouterLink>
 <RouterView/>      </div>
       <h3>MENSUELLES</h3>
-      <div class="space-y-10 pl-40   flex flex-col    w-3/4 h-auto  ">
+      <div class="space-y-10 pl-40  flex flex-col    w-3/4   ">
   <RouterLink to="/" v-for="quetes in orderByDuree"  :key="quetes"
-        ><Etiquete1 v-if="quetes.duree === 'mois' "  :nom="quetes.nom" :categorie="quetes.categorie" :xp="quetes.xp"
+        ><Etiquete1 v-if="quetes.duree === 'mois'  "  :nom="quetes.nom" :categorie="quetes.categorie" :xp="quetes.xp"
       /></RouterLink>
 <RouterView/>      </div>
       <h2>Archives</h2>

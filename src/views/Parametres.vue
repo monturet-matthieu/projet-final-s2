@@ -16,11 +16,11 @@
           shadow-lg
         "
       >
-        <a class="p-5" href="">Contrôle du compte</a>
+        <a class="p-5" href="/parametres/controle-compte">Contrôle du compte</a>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="">Mes catégories</a>
+        <a class="p-5" href="/parametres/mes-categories">Mes catégories</a>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="">Lien d'amitié</a>
+        <a class="p-5" href="/parametres/lien-amitie">Lien d'amitié</a>
       </div>
     </div>
 
@@ -38,11 +38,11 @@
           shadow-lg
         "
       >
-        <a class="p-5" href="">Informations</a>
+        <a class="p-5" href="/parametres/informations">Informations</a>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="">Autorisations</a>
+        <a class="p-5" href="/parametres/autorisations">Autorisations</a>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="">Confidentialité</a>
+        <a class="p-5" href="/parametres/confidentialite">Confidentialité</a>
       </div>
     </div>
 
@@ -60,15 +60,15 @@
           shadow-lg
         "
       >
-        <a class="p-5" href="">Infos sur les mises à jour</a>
+        <a class="p-5" href="/parametres/maj">Infos sur les mises à jour</a>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="./">Contact & soutient</a>
+        <a class="p-5" href="/parametres/contact">Contact & soutient</a>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="./CGU">Conditions générales d'utilisation</a>
+        <a class="p-5" href="/parametres/cgu">Conditions générales d'utilisation</a>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="./CGV">Conditions générales de vente</a>
+        <a class="p-5" href="/parametres/cgv">Conditions générales de vente</a>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="./Mentions">Mentions légales</a>
+        <a class="p-5" href="/parametres/mentions">Mentions légales</a>
         <div class="h-[1px] bg-slate-100"></div>
       </div>
     </div>
