@@ -12,13 +12,14 @@ import Footer from "../components/layout/Footer.vue";
   <div
     class="
       flex
-      mx-16
       my-4
       mt-12
       justify-center
       gap-8
       bg-Boutons
       p-2
+      max-w-xl
+      mx-auto
       rounded-14xl
     "
   >

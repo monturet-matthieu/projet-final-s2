@@ -1,4 +1,4 @@
-template>
+<template>
   <div>
     <h2 class="text-2xl font-bold mt-14 mb-2 ml-5">
       Autorisation de l'appareil
@@ -36,6 +36,7 @@ template>
       class="justify-center p-8 mb-5"
   /></a>
 </template>
+
 <script>
 import Checkbox from "../../components/checkbox.vue";
 export default {

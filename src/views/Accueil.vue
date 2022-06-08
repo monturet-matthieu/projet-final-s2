@@ -12,7 +12,7 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
     />
     <body>
       <h1 class="font-bold">Éti’quêtes à effectuer</h1>
-      <img src="/public/gif/quests.gif" class="w-60 mx-auto" alt="">
+      <img src="/public/gif/quests.gif" class="w-60 mx-auto" alt="" />
       <div
         class="flex mx-16 my-4 justify-center gap-2 bg-Boutons p-2 rounded-14xl"
       >
@@ -26,16 +26,26 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
       <RouterLink to="/ajoutquete"
         ><img
           src="../../public/icon/new-message.svg"
-          class="fixed left-10 right-3"
+          class="fixed left-80 right-3 bottom-56"
           alt="icone menant vers la page d'ajout de quêtes"
       /></RouterLink>
 
-      <h3 class="font-gothic uppercase text-Secondaire font-bold text-lg">
+      <h3
+        class="
+          font-gothic
+          uppercase
+          text-Secondaire
+          font-bold
+          text-lg
+          ml-4
+          mb-4
+        "
+      >
         JOURNALIÈRES
       </h3>
 
       <!-- affichage liste synchro -->
-      <div class="space-y-10  flex flex-col w-3/4 h-auto">
+      <div class="space-y-10 flex flex-col w-10/12">
         <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
           ><Etiquete1
             v-if="quetes.duree === 'jour'"
@@ -45,10 +55,22 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
         /></RouterLink>
         <RouterView />
       </div>
-      <h3 class="font-gothic uppercase text-Secondaire font-bold text-lg">
+
+      <h3
+        class="
+          font-gothic
+          uppercase
+          text-Secondaire
+          font-bold
+          text-lg
+          ml-4
+          mb-4
+        "
+      >
         HEBDOMADAIRES
       </h3>
-      <div class="space-y-10 pl-40 flex flex-col w-3/4 h-auto">
+
+      <div class="space-y-10 flex flex-col w-10/12">
         <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
           ><Etiquete1
             v-if="quetes.duree === 'semaine'"
@@ -58,10 +80,22 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
         /></RouterLink>
         <RouterView />
       </div>
-      <h3 class="font-gothic uppercase text-Secondaire font-bold text-lg">
+
+      <h3
+        class="
+          font-gothic
+          uppercase
+          text-Secondaire
+          font-bold
+          text-lg
+          ml-4
+          mb-4
+        "
+      >
         MENSUELLES
       </h3>
-      <div class="space-y-10 pl-40 flex flex-col w-3/4 h-auto">
+
+      <div class="space-y-10 flex flex-col w-10/12">
         <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
           ><Etiquete1
             v-if="quetes.duree === 'mois'"
