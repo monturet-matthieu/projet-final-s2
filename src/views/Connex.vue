@@ -19,10 +19,10 @@
                     {{ message }}
                 </div>
                 <div>
-                    
-                    <button variant="dark" class="float-right bg-Boutons w-48 h-14 align-middle px-6 rounded-14xl font-bebas-neue text-4xl "  type="submit">
+                    <router-link to="/"> <button variant="dark" class="float-right bg-Boutons w-48 h-14 align-middle px-6 rounded-14xl font-bebas-neue text-4xl "  type="submit">
                         Se connecter
-                    </button>
+                    </button></router-link>
+                   
                 </div>
             </form>
         <router link to="/">
@@ -39,81 +39,103 @@
 </template>
 
 <script>
-// Bibliothèques Firebase  : import des fonctions
-//  signInWithEmailAndPassword : Authentification avec email et mot de passe
-//  getAuth : Fonction générale d'authentification
-//  signOut : Se deconnecter
-//  onAuthStateChanged : connaitre le statut de l'utilisateur (connecté ou non)
-import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-auth.js'
-
-// Bibliothèque Firestore : import des fonctions
+import {emitter} from '../main.js'
 import { 
-    getFirestore, 
-    collection, 
-    doc, 
-    getDocs, 
-    addDoc, 
-    updateDoc, 
-    deleteDoc, 
-    onSnapshot } from 'https://www.gstatic.com/firebasejs/9.7.0/firebase-firestore.js'
-
-
-    export default {   
-        name: 'Connexion',
-        data(){ // Données de la vue
-          return{                
-                user:{          // user se connectant
-                    email:null,
-                    password:null
-                },
+    getFirestore,   // Obtenir le Firestore
+    collection,     // Utiliser une collection de documents
+    doc,            // Obtenir un document par son id
+    getDocs,        // Obtenir la liste des documents d'une collection
+    getDoc,
+    
+    addDoc,         // Ajouter un document à une collection
+    updateDoc,      // Mettre à jour un document dans une collection
+    deleteDoc,      // Supprimer un document d'une collection
+    onSnapshot,     // Demander une liste de documents d'une collection, en les synchronisant
+    query,          // Permet d'effectuer des requêtes sur Firestore
+    orderBy         // Permet de demander le tri d'une requête query
+    } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js'
+import {
+    getAuth, 
+    signInWithEmailAndPassword, 
+    createUserWithEmailAndPassword,
+    inMemoryPersistence,
+    GoogleAuthProvider,
+    signInWithRedirect,
+    signOut,
+    setPersistence, 
+    onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js'
+import { RouterLink } from 'vue-router';
+export default {
+    components:{},
+    data(){
+        return{
+            SignIn:false,
+            user:{
+                password:null,
+                email:null,
+                login:null,
+            },
+            password2:null,
+            message:null,
+        }
+    },
+    methods:{
+        // onCnx(){
+        //     signInWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
+        //     .then((response)=>{
+        //         console.log('user connecté', response.user);
+        //         this.user = response.user;
+        //         this.message = "User connecté : " +this.user.email;
+        //     })
+        //     .catch((error)=>{
+        //         console.log('erreur de connexion', error);
+        //         this.message = "Erreur d'authentification";
+        //     })
+        // },
+        onCnx(){
+            signInWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
+            .then((response) =>{
+                this.user = response.user;
+                console.log("user", this.user);
+                emitter.emit('connectUser', {user: this.user});
+                this.message = "user connecté : " + this.user.email;
+            })
+            .catch((error)=>{
+                console.log('erreur connexion', error);
+                this.message = "erreur d'authentification";
+            })
+        },
+        onCreate(){
+            if(this.user.password===this.password2){
+                createUserWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
+                    .then((response) => {
+                        // Signed in 
+                        const user = response.user;
+                        this.writeUserData(user);
+                        // ...
+                    })
+                    .catch((error) => {
+                        console.log('erreur création', error);
+                        this.message = "erreur de création";
+                        // ..
+                    })  
+            }else{
+                this.message = "password pas cohérent"
+                console.log('mdp mauvais')
             }
         },
-
-        mounted(){ // Montage de la vue
-            // Rechercher si un user est déjà connecté
-                let user = getAuth().currentUser;
-                if(user){
-                    this.user = user;
-                    this.message = "User déjà connecté : "+this.user.email;
-                }else{
-                    this.message = "User non connecté : "+this.user.email;
-                }
-        },
-
-        methods:{
-            onCnx(){                
-                // Se connecter avec user et mot de passe           
-                signInWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
-                .then((response)=>{
-                    // Connexion OK
-                    console.log('user connecté', response.user);
-                    this.user = response.user;
-                    this.message = "User connecté : "+this.user.email;
+        async writeUserData(user){
+                const firestore = getFirestore();
+                const dbUser = collection(firestore, "user");
+                const docRef = await addDoc(dbUser,{
+                    login: this.user.login,
+                    email:this.user.email,
+                    uid: user.uid,
+                    admin:false
                 })
-                .catch((error) =>{
-                    // Erreur de connexion
-                    console.log('Erreur connexion', error);
-                    this.message = "Erreur d'authentification";
-                })
-            },
-            onDcnx(){
-                // Se déconnecter
-                signOut(getAuth())
-                .then(response =>{
-                    this.user = getAuth().currentUser;
-                    this.user = {
-                        email:null,
-                        password:null
-                    };
-                    console.log("user deconnecté ", this.user);        
-                    this.message = 'user non connecté';
-                })
-                .catch(error=>{
-                    console.log('erreur deconnexion ', error);
-                })
-
-            },
+                console.log('document créé avec le id : ', docRef.id);
+                emitter.emit('connectUser', {user: this.user}); 
         }
-    }
-
+    },
+}
 </script>

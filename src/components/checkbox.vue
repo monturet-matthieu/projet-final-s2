@@ -1,32 +1,26 @@
 <template>
-  <div class="flex justify-center my-auto">
-    <div>
-      <div class="form-check">
-        <input
-          class="
-            form-check-input
-            appearance-none
-            h-8
-            w-8
-            border border-Boutons
-            rounded-10xl
-            bg-Primaire
-            checked:bg-Boutons
-            focus:outline-none
-            transition
-            duration-200
-            bg-no-repeat bg-center bg-contain
-            mr-2
-            cursor-pointer
-          "
-          type="checkbox"
-          value=""
-          id="flexCheckDefault"
-        />
-        <label class="form-check-label text-Texte" for="flexCheckDefault">
-          {{ nom }}
-        </label>
-      </div>
+  <div class="flex justify-start">
+    <div class="my-4 ml-4">
+      <input
+        class="
+          appearance-none
+          h-8
+          w-8
+          border border-Boutons
+          rounded-10xl
+          bg-Primaire
+          checked:bg-Boutons
+          focus:outline-none
+          transition
+          duration-200
+          mr-8
+          cursor-pointer
+        "
+        type="checkbox"
+      />
+      <label class="text-Texte">
+        {{ nom }}
+      </label>
     </div>
   </div>
 </template>
