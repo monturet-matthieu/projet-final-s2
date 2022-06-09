@@ -85,7 +85,7 @@
     ><img
       src="/public/img/ads-l.png"
       border="0"
-      alt="cadrant publicitaire"
+      alt="cadran publicitaire"
       class="justify-center p-8"
   /></a>
 </template>
