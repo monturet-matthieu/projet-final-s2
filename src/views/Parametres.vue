@@ -16,11 +16,11 @@
           shadow-lg
         "
       >
-        <a class="p-5" href="/parametres/controle-compte">Contrôle du compte</a>
+        <RouterLink class="p-5" to="/parametres/controle-compte">Contrôle du compte</RouterLink>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="/parametres/mes-categories">Mes catégories</a>
+        <RouterLink class="p-5" to="/parametres/mes-categories">Mes catégories</RouterLink>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="/parametres/lien-amitie">Lien d'amitié</a>
+        <RouterLink class="p-5" to="/parametres/lien-amitie">Lien d'amitié</RouterLink>
       </div>
     </div>
 
@@ -38,11 +38,11 @@
           shadow-lg
         "
       >
-        <a class="p-5" href="/parametres/informations">Informations</a>
+        <RouterLink class="p-5" to="/parametres/informations">Informations</RouterLink>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="/parametres/autorisations">Autorisations</a>
+        <RouterLink class="p-5" to="/parametres/autorisations">Autorisations</RouterLink>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="/parametres/confidentialite">Confidentialité</a>
+        <RouterLink class="p-5" to="/parametres/confidentialite">Confidentialité</RouterLink>
       </div>
     </div>
 
@@ -60,15 +60,15 @@
           shadow-lg
         "
       >
-        <a class="p-5" href="/parametres/maj">Infos sur les mises à jour</a>
+        <RouterLink class="p-5" to="/parametres/maj">Infos sur les mises à jour</RouterLink>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="/parametres/contact">Contact & soutient</a>
+        <RouterLink class="p-5" to="/parametres/contact">Contact & soutient</RouterLink>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="/parametres/cgu">Conditions générales d'utilisation</a>
+        <RouterLink class="p-5" to="/parametres/cgu">Conditions générales d'utilisation</RouterLink>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="/parametres/cgv">Conditions générales de vente</a>
+        <RouterLink class="p-5" to="/parametres/cgv">Conditions générales de vente</RouterLink>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="/parametres/mentions">Mentions légales</a>
+        <RouterLink class="p-5" to="/parametres/mentions">Mentions légales</RouterLink>
         <div class="h-[1px] bg-slate-100"></div>
       </div>
     </div>
@@ -88,9 +88,9 @@
           mb-24
         "
       >
-        <a class="p-5" href="">Passer en mode premium</a>
+        <a class="p-5" href="#">Passer en mode premium</a>
         <div class="h-[1px] bg-slate-100"></div>
-        <a class="p-5" href="">Changer de compte</a>
+        <a class="p-5" href="/connexion">Changer de compte</a>
         <div class="h-[1px] bg-slate-100"></div>
         <button class="p-5 text-Important font-semibold" @click="onDcnx()">
           Deconnexion

@@ -35,7 +35,7 @@
                 </button>
             </div>
             </form>
-            <table class="table w-full text-center">
+            <table class=" w-full text-center">
             <thead class="thead-dark">
                 <tr>
                 <th scope="col">Nom</th>
@@ -45,7 +45,7 @@
                 <th scope="col">XP</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="">
               
                 <tr v-for='quetes in listeQuetes' :key='quetes.id'>
                 <td>
@@ -69,11 +69,10 @@
             </table>
             <hr/>
 </div>
-<!-- affichage liste synchro -->
-<!-- <div class="md:grid-cols-2 xl:grid-cols-4 lg:grid-cols-3 md:px-10 px-3 md:grid    z-20 relative w-full justify-center"><RouterLink to="/artiste" v-for="artistes in listeArtistes" :key="artistes"
-        ><Card2 :nom="quetes.nom" 
-      /></RouterLink>
-<RouterView/>      </div> -->
+
+<button class="border-black bottom-2" type="button"  @click='updateQuetes()' title="Création">
+                Modifier la quête
+</button>
 
 
 

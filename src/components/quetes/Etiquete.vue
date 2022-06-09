@@ -1,11 +1,11 @@
 <template>
     <div>
-        <div class="bg-bleu80% flex pb-2  -ml-16 rounded-9xl ">
+        <div class="bg-bleu80% flex pb-2 pr-24 -ml-16 rounded-9xl ">
             <img class="ml-6" src="../../../public/icon/rond-etiquete.svg" alt="rond de validation vide">
-            <div class="bg-white flex flex-col ml-6 mt-2 m-4  rounded-9xl">
-                <div class="flex gap-20  mr-8 mt-2">
-                    <h5 class="text-gray-500 ml-5 font-light justify-start">{{categorie}}</h5>
-                    <span class="text-Important font-medium justify-end">{{xp}} XP</span>
+            <div class="bg-white w-full px-10 ml-6 mt-2 s rounded-9xl">
+                <div class="flex w-full space-x-14 mr-14 mt-2">
+                    <h5 class="text-gray-500 ml-5 left-5 w-20 font-light justify-start">{{categorie}}</h5>
+                    <span class="text-Important w-20  font-medium justify-end">{{xp}} XP</span>
                 </div>
 
                 <div class="mt-4">
@@ -73,16 +73,18 @@ export default{
         async updateQuetes(quetes) {
         // Obtenir Firestore
         const firestore = getFirestore();
-        const docRef = doc(firestore, "quetes", quetes.id);
+        const docRef = doc(firestore, "quetes", quetes);
         // On passe en paramètre format json
         // Les champs à mettre à jour
         await updateDoc(docRef, {
             nom: quetes.nom,
+            categorie: quetes.categorie,
+            duree: quetes.duree,
         });
         },
         async deleteQuetes(quetes) {
         const firestore = getFirestore();
-        const docRef = doc(firestore, "quetes", quetes.id);
+        const docRef = doc(firestore, "quetes", quetes);
         await deleteDoc(docRef);
         },
     }

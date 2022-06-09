@@ -2,7 +2,7 @@
 <main>
     
     <body class="bg-Primaire">
-            <form @submit.prevent="onCnx()" class="absolute mt-64 content-center z-10 text-Primaire align-middle">
+            <form @submit.prevent="onCnx()" class="absolute pt-96 content-center z-10 text-Primaire align-middle">
                 <div class="input-group mb-3 ">            
                     <div class="input-group-prepend">
                         <button class="btn btn-dark"></button>
@@ -29,7 +29,7 @@
             <img src="../../public/icon/logo-final-w.svg" class="relative -mt-44  ml-3 w-20 z-20" alt="">
         </router>
             
-        <img class="relative -mt-48 pt-20 mb-32" src="../../public/img/sign.jpg" alt="">
+        <img class="relative pt-0 mb-32" src="../../public/img/sign.jpg" alt="">
      
     </body>
     

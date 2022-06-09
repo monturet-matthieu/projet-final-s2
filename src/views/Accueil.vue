@@ -1,5 +1,6 @@
 <script setup>
 import Etiquete1 from "../components/quetes/Etiquete.vue";
+import Footer from "../components/layout/Footer.vue";
 </script>
 
 <template>
@@ -25,7 +26,7 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
       <RouterLink to="/ajoutquete"
         ><img
           src="../../public/icon/new-message.svg"
-          class="fixed left-80 right-3 bottom-80"
+          class="fixed left-80 right-3 bottom-24"
           alt="icone menant vers la page d'ajout de quêtes"
       /></RouterLink>
 
@@ -113,6 +114,9 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
         </div>
       </div>
     </body>
+    <footer class="py-20">
+      <Footer/>
+    </footer>
   </main>
 </template>
 
@@ -156,7 +160,7 @@ export default {
     Quot() {
       let query = this.qQuot;
       return this.listeQuetes.filter(function (quetes) {
-        return quetes.duree.includes(query);
+        return quetes.duree.includes(query) ;
       });
     },
     Hebd() {
