@@ -25,8 +25,8 @@ import Footer from "../components/layout/Footer.vue";
       </div>
       <RouterLink to="/ajoutquete"
         ><img
-          src="../../public/icon/new-message.svg"
-          class="fixed left-80 right-3 bottom-24"
+          src="../../public/icon/ajout.png"
+          class="fixed left-72 bottom-24"
           alt="icone menant vers la page d'ajout de quêtes"
       /></RouterLink>
 
@@ -45,22 +45,23 @@ import Footer from "../components/layout/Footer.vue";
           >
             JOURNALIÈRES
           </h3>
-          <img class="mb-8 -mt-2" src="../../public/icon/quot.svg" alt="">
+          <img class="mb-8 -mt-2" src="../../public/icon/quot.svg" alt="" />
         </div>
 
         <!-- affichage liste synchro -->
         <div class="space-y-10 flex flex-col w-10/12">
-          <div v-for="quetes in Quot" :key="quetes"
-            ><Etiquete1
+          <div v-for="quetes in Quot" :key="quetes">
+            <Etiquete1
               :nom="quetes.nom"
               :categorie="quetes.categorie"
               :xp="quetes.xp"
-          /></div>
+            />
+          </div>
           <RouterView />
         </div>
 
         <div class="flex justify-end space-x-6 mr-4 mt-10">
-          <img class="mb-8 -mt-2" src="../../public/icon/hebd.svg" alt="">
+          <img class="mb-8 -mt-2" src="../../public/icon/hebd.svg" alt="" />
           <h3
             class="
               font-gothic
@@ -77,45 +78,47 @@ import Footer from "../components/layout/Footer.vue";
         </div>
 
         <div class="flex flex-col space-y-10 w-10/12">
-          <div v-for="quetes in Hebd" :key="quetes"
-            ><Etiquete1 
+          <div v-for="quetes in Hebd" :key="quetes">
+            <Etiquete1
               :nom="quetes.nom"
               :categorie="quetes.categorie"
               :xp="quetes.xp"
-          /></div>
+            />
+          </div>
           <RouterView />
         </div>
 
         <div class="flex space-x-6 mr-4 mt-10">
-        <h3
-          class="
-            font-gothic
-            uppercase
-            text-Secondaire
-            font-bold
-            text-lg
-            ml-4
-            mb-4
-          "
-        >
-          MENSUELLES
-        </h3>
-        <img class="mb-8 -mt-2" src="../../public/icon/mens.svg" alt="">
+          <h3
+            class="
+              font-gothic
+              uppercase
+              text-Secondaire
+              font-bold
+              text-lg
+              ml-4
+              mb-4
+            "
+          >
+            MENSUELLES
+          </h3>
+          <img class="mb-8 -mt-2" src="../../public/icon/mens.svg" alt="" />
         </div>
 
         <div class="space-y-10 flex flex-col w-10/12">
-          <div v-for="quetes in Mens" :key="quetes"
-            ><Etiquete1
+          <div v-for="quetes in Mens" :key="quetes">
+            <Etiquete1
               :nom="quetes.nom"
               :categorie="quetes.categorie"
               :xp="quetes.xp"
-          /></div>
+            />
+          </div>
           <RouterView />
         </div>
       </div>
     </body>
     <footer class="py-20">
-      <Footer/>
+      <Footer />
     </footer>
   </main>
 </template>
@@ -151,16 +154,16 @@ export default {
         etat: null,
         xp: null,
       },
-      qQuot: 'jour',
-      qHebd: 'semaine',
-      qMens: 'mois',
+      qQuot: "jour",
+      qHebd: "semaine",
+      qMens: "mois",
     };
   },
   computed: {
     Quot() {
       let query = this.qQuot;
       return this.listeQuetes.filter(function (quetes) {
-        return quetes.duree.includes(query) ;
+        return quetes.duree.includes(query);
       });
     },
     Hebd() {
