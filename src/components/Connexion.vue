@@ -35,7 +35,7 @@
 //  getAuth : Fonction générale d'authentification
 //  signOut : Se deconnecter
 //  onAuthStateChanged : connaitre le statut de l'utilisateur (connecté ou non)
-import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js',
+import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js';
 
 // Bibliothèque Firestore : import des fonctions
 import { 
@@ -84,7 +84,7 @@ import {
                 signInWithEmailAndPassword(getAuth(), this.user.email, this.user.password)
                 .then((response)=>{
                     // Connexion OK
-                    console.log('user connecté', response.user);
+                    // console.log('user connecté', response.user);
                     this.user = response.user;
                     this.message = "User connecté : "+this.user.email;
                 })
@@ -103,7 +103,7 @@ import {
                         email:null,
                         password:null
                     };
-                    console.log("user deconnecté ", this.user);        
+                    // console.log("user deconnecté ", this.user);        
                     this.message = 'user non connecté';
                 })
                 .catch(error=>{

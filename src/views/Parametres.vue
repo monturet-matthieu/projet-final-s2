@@ -160,7 +160,7 @@ export default {
             email: null,
             password: null,
           };
-          console.log("user deconnecté ", this.user);
+          // console.log("user deconnecté ", this.user);
           this.message = "user non connecté";
         })
         .catch((error) => {

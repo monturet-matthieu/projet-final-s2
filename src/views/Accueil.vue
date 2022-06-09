@@ -194,7 +194,7 @@ export default {
           ...doc.data(),
         }));
 
-        console.log("listeQuetes", this.listeQuetes);
+        // console.log("listeQuetes", this.listeQuetes);
       });
     },
 
@@ -225,7 +225,7 @@ export default {
       //  duree: this.duree
       //           xp: this.xp
       //           categorie: this.categorie
-      console.log("document créé avec le id : ", docRef.id);
+      // console.log("document créé avec le id : ", docRef.id);
     },
 
     async updateQuetes(quetes) {
