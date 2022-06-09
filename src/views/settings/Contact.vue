@@ -8,105 +8,7 @@
     Une question? Des remarques ? Contactez nous!
   </h2>
   <Formulaire />
-  <!-- <form class="flex flex-col justify-center px-5 space-y-6">
-    <input
-      type="text"
-      name="nom"
-      class="
-        text-black
-        placeholder:text-Texte
-        bg-white
-        border-1 border-Texte
-        rounded-lg
-        px-3
-        py-2
-      "
-      placeholder="[Saisissez votre nom]"
-    />
-    <label for="nom">Nom : </label>
-    <input
-      type="text"
-      name="prenom"
-      class="
-        text-black
-        placeholder:text-Texte
-        bg-white
-        border-1 border-Texte
-        rounded-lg
-        px-3
-        py-2
-      "
-      placeholder="[Saisissez votre prénom]"
-    />
-    <label for="prenom">Prénom : </label>
 
-    <input
-      type="text"
-      name="objet"
-      class="
-        text-black
-        placeholder:text-Texte
-        bg-white
-        border-1 border-Texte
-        rounded-lg
-        px-3
-        py-2
-      "
-      placeholder="[Saisissez votre type de demande]"
-    />
-    <label for="objet">Type de demande : </label>
-
-    <input
-      type="tel"
-      name="tel"
-      class="
-        text-black
-        placeholder:text-Texte
-        bg-white
-        border-1 border-Texte
-        rounded-lg
-        px-3
-        py-2
-      "
-      placeholder="[Saisissez votre numéro de portable]"
-    />
-    <label for="tel">Téléphone portable : </label>
-
-    <input
-      type="email"
-      name="mail"
-      class="
-        text-black
-        placeholder:text-Texte
-        bg-white
-        border-1 border-Texte
-        rounded-lg
-        px-3
-        py-2
-      "
-      placeholder="[Saisissez votre E-Mail]"
-    />
-    <label for="email">E-Mail : </label>
-
-    <input
-      type="text"
-      name="message"
-      class="
-        text-black
-        placeholder:text-Texte
-        bg-white
-        border-1 border-Texte
-        rounded-lg
-        px-3
-      "
-      aria-rowcount="200"
-      size="200"
-      placeholder="[Saisissez votre message]"
-    />
-    <label for="message">Votre message : </label>
-  </form> -->
-
-  <!-- <div class="w-44 ml-20 mb-2 border-b-2 border-bleu30%"></div> -->
   <div class="bg-Secondaire text-Primaire py-2">
     <h2 class="text-2xl font-bold mt-14 mb-2 ml-5">Membres de l'équipe</h2>
     <p class="text-xl font-normal mt-5 mb-2 ml-5 align-item-center lg:w-2/3">
@@ -116,7 +18,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 mx-auto">
       <div class="w-1/3 mx-auto">
         <h3 class="text-center text-xl font-medium mt-14 mb-1">Alicia</h3>
-        <img class="w-full" src="/public/img/alicia.webp" alt="alicia" />
+        <img class="w-full" src="/public/img/alicia.png" alt="alicia" />
         <h4 class="text-center mt-1">Communication</h4>
       </div>
 
@@ -131,7 +33,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 mx-auto">
       <div class="w-1/3 mx-auto">
         <h3 class="text-center text-xl font-medium mb-1 mt-14">Lucas</h3>
-        <img class="w-full" src="/public/img/lucas.webp" alt="lucas" />
+        <img class="w-full" src="/public/img/lucas.png" alt="lucas" />
         <h4 class="text-center mt-1">Design</h4>
       </div>
 
@@ -151,7 +53,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 mx-auto">
       <div class="w-1/3 mx-auto">
         <h3 class="text-center text-xl font-medium mb-1 mt-14">Matthieu</h3>
-        <img class="w-full" src="/public/img/matthieu.webp" alt="lucas" />
+        <img class="w-full" src="/public/img/matthieu.png" alt="lucas" />
         <h4 class="text-center mt-1">Programmation</h4>
       </div>
 
@@ -176,7 +78,7 @@
         "
       >
         Envoyer un mail
-        <img class="w-8 ml-1" src="/public/icon/send.svg" alt="" />
+        <img cl class="w-8 ml-2 my-auto" src="/public/img/mail.svg" alt="" />
       </button>
     </div>
   </div>

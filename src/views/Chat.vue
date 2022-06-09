@@ -183,7 +183,7 @@
               <div v-if="disc.id == discussion.id">
                 <div v-for="msg in sortMsgByDate(disc.msg)" :key="msg.date">
                   <div
-                    class="mb-1 mr-auto my-5 gap-1 flex flex-wrap"
+                    class="mb-4 ml-20 my-5 gap-1 flex flex-wrap"
                     v-if="msg.by == user.uid"
                   >
                     <p
