@@ -49,17 +49,16 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
 
         <!-- affichage liste synchro -->
         <div class="space-y-10 flex flex-col w-10/12">
-          <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
+          <div v-for="quetes in Quot" :key="quetes"
             ><Etiquete1
-              v-if="quetes.duree === 'jour'"
               :nom="quetes.nom"
               :categorie="quetes.categorie"
               :xp="quetes.xp"
-          /></RouterLink>
+          /></div>
           <RouterView />
         </div>
 
-        <div class="flex justify-end space-x-6 mr-4 -mt-80 -mb-96 -">
+        <div class="flex justify-end space-x-6 mr-4 mt-10">
           <img class="mb-8 -mt-2" src="../../public/icon/hebd.svg" alt="">
           <h3
             class="
@@ -77,17 +76,16 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
         </div>
 
         <div class="flex flex-col space-y-10 w-10/12">
-          <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
-            ><Etiquete1
-              v-if="quetes.duree === 'semaine'"
+          <div v-for="quetes in Hebd" :key="quetes"
+            ><Etiquete1 
               :nom="quetes.nom"
               :categorie="quetes.categorie"
               :xp="quetes.xp"
-          /></RouterLink>
+          /></div>
           <RouterView />
         </div>
 
-        <div class="flex space-x-6 mr-4 mt-10 -mb-96">
+        <div class="flex space-x-6 mr-4 mt-10">
         <h3
           class="
             font-gothic
@@ -105,13 +103,12 @@ import Etiquete1 from "../components/quetes/Etiquete.vue";
         </div>
 
         <div class="space-y-10 flex flex-col w-10/12">
-          <RouterLink to="/" v-for="quetes in orderByDuree" :key="quetes"
+          <div v-for="quetes in Mens" :key="quetes"
             ><Etiquete1
-              v-if="quetes.duree === 'mois'"
               :nom="quetes.nom"
               :categorie="quetes.categorie"
               :xp="quetes.xp"
-          /></RouterLink>
+          /></div>
           <RouterView />
         </div>
       </div>
@@ -150,14 +147,28 @@ export default {
         etat: null,
         xp: null,
       },
+      qQuot: 'jour',
+      qHebd: 'semaine',
+      qMens: 'mois',
     };
   },
   computed: {
-    orderByDuree: function () {
-      return this.listeQuetes.sort(function (quetes) {
-        if (quetes.duree === "jour") return -1;
-
-        return 0;
+    Quot() {
+      let query = this.qQuot;
+      return this.listeQuetes.filter(function (quetes) {
+        return quetes.duree.includes(query);
+      });
+    },
+    Hebd() {
+      let query = this.qHebd;
+      return this.listeQuetes.filter(function (quetes) {
+        return quetes.duree.includes(query);
+      });
+    },
+    Mens() {
+      let query = this.qMens;
+      return this.listeQuetes.filter(function (quetes) {
+        return quetes.duree.includes(query);
       });
     },
   },

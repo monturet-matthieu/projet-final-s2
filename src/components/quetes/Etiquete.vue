@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="bg-bleu80% flex pb-2 -ml-16 rounded-9xl ">
+        <div class="bg-bleu80% flex pb-2  -ml-16 rounded-9xl ">
             <img class="ml-6" src="../../../public/icon/rond-etiquete.svg" alt="rond de validation vide">
             <div class="bg-white flex flex-col ml-6 mt-2 m-4  rounded-9xl">
                 <div class="flex gap-20  mr-8 mt-2">
@@ -14,11 +14,11 @@
 
                 <div class="pb-0.5 bg-gray-300 mx-12 mt-6 mb-4"></div>
 
-                <div class="flex space-x-8 justify-center mb-4">
+                <div class="flex space-x-8 justify-center mb-4"> <!-- v-for="quetes in listeQuetes" :key="quetes" -->
                     <img class="w-8" src="../../../public/icon/quete-info.svg" alt="Bouton redirigeant vers les informations de la quête">
                     <img src="../../../public/icon/quete-changement.svg" alt="Bouton permettant de changer la quête en cours">
-                    <img src="../../../public/icon/quete-parametres.svg" alt="Bouton permettant de régler les paramètres de la quête">
-                    <img src="../../../public/icon/quete-poubelle.svg" alt="Bouton permettant de supprimer la quête" @click.prevent="deleteQuetes(quetes)">
+                    <button type="button" @click.prevent="updateQuetes(quetes)"><img src="../../../public/icon/quete-parametres.svg" alt="Bouton permettant de régler les paramètres de la quête"></button>
+                    <button type="button" @click.prevent="deleteQuetes(quetes)"><img src="../../../public/icon/quete-poubelle.svg" alt="Bouton permettant de supprimer la quête"></button>
                 </div>
             </div>
         </div>
@@ -48,22 +48,43 @@ export default{
         xp: Number
     },
 
-data() {
-    return {
-      listeQuetes: [],
-      nomQuetes:null
-      
-    };
-  },
+    data() {
+        return {
+        listeQuetes: [],
+        
+        
+        };
+    },
+    
+    mounted() {
+        this.getQuetes();
+    },
 
-methods: {
-    async deleteQuetes(quetes){
-          // Obtenir Firestore
-          const firestore = getFirestore();
-          const docRef = doc(firestore, "quetes", quetes);
-          // Suppression du pays référencé
-          await deleteDoc(docRef);
-        }
-}
+    methods: {
+        async getQuetes() {
+        const firestore = getFirestore();
+        const dbQuetes = collection(firestore, "quetes");
+        const q = query(dbQuetes, orderBy("nom", "asc"));
+        await onSnapshot(q, (snapshot) => {
+            this.listeQuetes = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+        });
+        },
+
+        async updateQuetes(quetes) {
+        // Obtenir Firestore
+        const firestore = getFirestore();
+        const docRef = doc(firestore, "quetes", quetes.id);
+        // On passe en paramètre format json
+        // Les champs à mettre à jour
+        await updateDoc(docRef, {
+            nom: quetes.nom,
+        });
+        },
+        async deleteQuetes(quetes) {
+        const firestore = getFirestore();
+        const docRef = doc(firestore, "quetes", quetes.id);
+        await deleteDoc(docRef);
+        },
+    }
 }
 </script>
