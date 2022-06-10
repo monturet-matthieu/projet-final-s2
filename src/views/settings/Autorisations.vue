@@ -30,7 +30,7 @@
   </div>
   <a href="https://www.google.com/intl/fr_fr/adsense/start/" target="_blank"
     ><img
-      src="/public/img/ads-l.png"
+      src="../../../public/img/ads-l.png"
       border="0"
       alt="cadrant publicitaire"
       class="justify-center p-8 mb-5"

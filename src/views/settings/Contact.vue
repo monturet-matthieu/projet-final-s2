@@ -1,7 +1,7 @@
 <template>
   <img
     class="absolute w-full -z-10 -mt-6"
-    src="/img/bg-messagerie.webp"
+    src="../../../public/img/bg-messagerie.webp"
     alt="motif de fond de la page"
   />
   <h2 class="font-bold text-xl ml-5 mb-5">
@@ -18,7 +18,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 mx-auto">
       <div class="w-1/3 mx-auto">
         <h3 class="text-center text-xl font-medium mt-14 mb-1">Alicia</h3>
-        <img class="w-full" src="/public/img/alicia.png" alt="alicia" />
+        <img class="w-full" src="../../../public/img/Alicia.png" alt="alicia" />
         <h4 class="text-center mt-1">Communication</h4>
       </div>
 
@@ -33,7 +33,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 mx-auto">
       <div class="w-1/3 mx-auto">
         <h3 class="text-center text-xl font-medium mb-1 mt-14">Lucas</h3>
-        <img class="w-full" src="/public/img/lucas.png" alt="lucas" />
+        <img class="w-full" src="../../../public/img/lucas.png" alt="lucas" />
         <h4 class="text-center mt-1">Design</h4>
       </div>
 
@@ -53,7 +53,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 mx-auto">
       <div class="w-1/3 mx-auto">
         <h3 class="text-center text-xl font-medium mb-1 mt-14">Matthieu</h3>
-        <img class="w-full" src="/public/img/matthieu.png" alt="lucas" />
+        <img class="w-full" src="../../../public/img/matthieu.png" alt="lucas" />
         <h4 class="text-center mt-1">Programmation</h4>
       </div>
 
@@ -78,7 +78,7 @@
         "
       >
         Envoyer un mail
-        <img cl class="w-8 ml-2 my-auto" src="/public/img/mail.svg" alt="" />
+        <img cl class="w-8 ml-2 my-auto" src="../../../public/img/mail.svg" alt="" />
       </button>
     </div>
   </div>
@@ -86,7 +86,7 @@
   <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     <img
       class="justify-center mx-auto"
-      src="/public/img/femme-assise.webp"
+      src="../../../public/img/femme-assise.webp"
       alt=""
     />
     <div class="mx-auto text-center my-auto">
@@ -98,19 +98,19 @@
           href="https://www.snapchat.com/add/updayme?share_id=W-vYSVFd0uw&locale=fr-FR"
           ><img
             class="mx-auto"
-            src="/public/icon/snapchat-bleu.svg"
+            src="../../../public/icon/snapchat-bleu.svg"
             alt="snapchat"
         /></a>
         <a href="https://twitter.com/UpdayMe"
           ><img
             class="mx-auto"
-            src="/public/icon/twitter-bleu.svg"
+            src="../../../public/icon/twitter-bleu.svg"
             alt="twitter"
         /></a>
         <a href="https://www.instagram.com/updayme/"
           ><img
             class="mx-auto"
-            src="/public/icon/instagram-bleu.svg"
+            src="../../../public/icon/instagram-bleu.svg"
             alt="instagram"
         /></a>
       </div>
@@ -133,13 +133,13 @@
       </h2>
       <img
         class="mx-auto my-auto mb-5"
-        src="/public/img/paypal-bleu.webp"
+        src="../../../public/img/paypal-bleu.webp"
         alt=""
       />
     </div>
     <img
       class="my-auto w-3/4 mx-auto"
-      src="/public/img/bouton-patreon.webp"
+      src="../../../public/img/bouton-patreon.webp"
       alt=""
     />
   </div>
