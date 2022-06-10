@@ -3,7 +3,7 @@
 <main>
   <body>
   <h1 class="font-gothic font-bold text-2xl ml-5">Profil</h1>
-  <a href="/arrivee2"><img class="mx-auto" src="/public/img/modifier.png" alt="" /></a>
+  <router-link to="/arrivee2"><img class="mx-auto" src="/public/img/modifier.png" alt="" /></router-link>
   <div class="grid grid-cols-1 lg:grid-cols-2">
     <div v-for="user in listeUsers" :key="user.id">
       <figure class="mx-auto w-2/6">
@@ -181,7 +181,6 @@
   <a href="https://www.google.com/intl/fr_fr/adsense/start/" target="_blank"
     ><img
       src="/public/img/ads-l.png"
-      border="0"
       alt="cadran publicitaire"
       class="justify-center mx-auto p-8 mb-20"
   /></a>

@@ -27,7 +27,7 @@ import Footer from "../components/layout/Footer.vue";
     <a class="p-3 rounded-6xl" href="./Chat">Messagerie</a>
   </div>
 
-  <a href="" class="flex pt-4 pb-2">
+  <div href="" class="flex pt-4 pb-2">
     <img
       class="w-12 h-12 ml-8"
       src="../../public/img/avatar-bleu.webp"
@@ -40,7 +40,7 @@ import Footer from "../components/layout/Footer.vue";
       src="../../public/icon/trophee.svg"
       alt="icône de trophée"
     />
-  </a>
+  </div>
   <Stats />
   <div class="w-44 ml-20 mb-2 border-b-2 border-bleu30%"></div>
 
